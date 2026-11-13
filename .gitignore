@@ -15,10 +15,20 @@
 /[Uu]ser[Ss]ettings/
 *.log
 
+<<<<<<< HEAD
 # Memory Profiler generated files
 # MemoryCaptures can get excessive in size
 # They also could contain extremely sensitive data
 /[Mm]emory[Cc]aptures/
+=======
+# By default unity supports Blender asset imports, *.blend1 blender files do not need to be commited to version control.
+*.blend1
+*.blend1.meta
+
+# MemoryCaptures can get excessive in size.
+# They also could contain extremely sensitive data
+/[Mm]emoryCaptures/
+>>>>>>> ac6e3e9ae3d3777920e7eaf5bf304b3596141f5f
 
 # Recordings can get excessive in size
 /[Rr]ecordings/
@@ -55,7 +65,10 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
+<<<<<<< HEAD
 .vsconfig
+=======
+>>>>>>> ac6e3e9ae3d3777920e7eaf5bf304b3596141f5f
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -66,6 +79,7 @@ ExportedObj/
 sysinfo.txt
 
 # Mono auto generated files
+<<<<<<< HEAD
 .dirstamp
 mono_crash.*
 tmpinst-dir.stamp
@@ -76,6 +90,13 @@ tmpinst-dir.stamp
 *.apk
 *.aab
 *.obb
+=======
+mono_crash.*
+
+# Builds
+*.apk
+*.aab
+>>>>>>> ac6e3e9ae3d3777920e7eaf5bf304b3596141f5f
 *.unitypackage
 *.unitypackage.meta
 *.app
@@ -83,6 +104,7 @@ tmpinst-dir.stamp
 # Crashlytics generated file
 crashlytics-build.properties
 
+<<<<<<< HEAD
 # Blender generated backup files
 /[Aa]ssets/**/*.blend1
 /[Aa]ssets/**/*.blend1.meta
@@ -130,6 +152,29 @@ crashlytics-build.properties
 /[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers.meta
 /[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db
 /[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta
+=======
+# TestRunner generated files
+InitTestScene*.unity*
+
+# Addressables default ignores, before user customizations
+/ServerData
+/[Aa]ssets/StreamingAssets/aa*
+/[Aa]ssets/AddressableAssetsData/link.xml*
+/[Aa]ssets/Addressables_Temp*
+# By default, Addressables content builds will generate addressables_content_state.bin
+# files in platform-specific subfolders, for example:
+# /Assets/AddressableAssetsData/OSX/addressables_content_state.bin
+/[Aa]ssets/AddressableAssetsData/*/*.bin*
+
+# Visual Scripting auto-generated files
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers.meta
+
+# Auto-generated scenes by play mode tests
+/[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+>>>>>>> ac6e3e9ae3d3777920e7eaf5bf304b3596141f5f
 
 # UI Toolkit auto generated files
 /UIElementsSchema/
