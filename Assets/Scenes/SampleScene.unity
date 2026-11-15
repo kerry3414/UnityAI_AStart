@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 33592107}
   - component: {fileID: 33592106}
   - component: {fileID: 33592105}
+  - component: {fileID: 33592109}
   m_Layer: 0
   m_Name: WP (1)
   m_TagString: Untagged
@@ -231,6 +232,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1451350367}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &33592109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33592104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161a1e766333a7f4697e0b6a1b4f9356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Waypoint
+  m_Neibores:
+  - {fileID: 1775329526}
+  - {fileID: 776381280}
+  - {fileID: 1868627601}
+  - {fileID: 852156810}
+  bLink: 0
+  inFloor: 0
 --- !u!1 &183355845
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,6 +375,7 @@ GameObject:
   - component: {fileID: 240400983}
   - component: {fileID: 240400982}
   - component: {fileID: 240400981}
+  - component: {fileID: 240400985}
   m_Layer: 0
   m_Name: WP (8)
   m_TagString: Untagged
@@ -455,6 +476,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1451350367}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &240400985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240400980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161a1e766333a7f4697e0b6a1b4f9356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Waypoint
+  m_Neibores:
+  - {fileID: 779261724}
+  - {fileID: 1826631096}
+  bLink: 0
+  inFloor: 0
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,6 +993,7 @@ GameObject:
   - component: {fileID: 776381283}
   - component: {fileID: 776381282}
   - component: {fileID: 776381281}
+  - component: {fileID: 776381285}
   m_Layer: 0
   m_Name: WP (4)
   m_TagString: Untagged
@@ -1055,6 +1094,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1451350367}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &776381285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776381280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161a1e766333a7f4697e0b6a1b4f9356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Waypoint
+  m_Neibores:
+  - {fileID: 1005809320}
+  - {fileID: 33592104}
+  bLink: 0
+  inFloor: 0
 --- !u!1 &779261724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,6 +1123,7 @@ GameObject:
   - component: {fileID: 779261727}
   - component: {fileID: 779261726}
   - component: {fileID: 779261725}
+  - component: {fileID: 779261729}
   m_Layer: 0
   m_Name: WP (9)
   m_TagString: Untagged
@@ -1167,6 +1224,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1451350367}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &779261729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779261724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161a1e766333a7f4697e0b6a1b4f9356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Waypoint
+  m_Neibores:
+  - {fileID: 901021545}
+  - {fileID: 240400980}
+  bLink: 0
+  inFloor: 0
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1228,6 +1302,7 @@ GameObject:
   - component: {fileID: 852156813}
   - component: {fileID: 852156812}
   - component: {fileID: 852156811}
+  - component: {fileID: 852156815}
   m_Layer: 0
   m_Name: WP
   m_TagString: Untagged
@@ -1328,6 +1403,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1451350367}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &852156815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852156810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161a1e766333a7f4697e0b6a1b4f9356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Waypoint
+  m_Neibores:
+  - {fileID: 1868627601}
+  - {fileID: 33592104}
+  bLink: 0
+  inFloor: 0
 --- !u!1 &901021545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1340,6 +1432,7 @@ GameObject:
   - component: {fileID: 901021548}
   - component: {fileID: 901021547}
   - component: {fileID: 901021546}
+  - component: {fileID: 901021550}
   m_Layer: 0
   m_Name: WP (10)
   m_TagString: Untagged
@@ -1440,6 +1533,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1451350367}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &901021550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901021545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161a1e766333a7f4697e0b6a1b4f9356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Waypoint
+  m_Neibores:
+  - {fileID: 1868627601}
+  - {fileID: 779261724}
+  bLink: 0
+  inFloor: 0
 --- !u!1 &1005809320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1452,6 +1562,7 @@ GameObject:
   - component: {fileID: 1005809323}
   - component: {fileID: 1005809322}
   - component: {fileID: 1005809321}
+  - component: {fileID: 1005809325}
   m_Layer: 0
   m_Name: WP (3)
   m_TagString: Untagged
@@ -1552,6 +1663,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1451350367}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1005809325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005809320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161a1e766333a7f4697e0b6a1b4f9356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Waypoint
+  m_Neibores:
+  - {fileID: 776381280}
+  - {fileID: 1775329526}
+  bLink: 0
+  inFloor: 0
 --- !u!1 &1025539162
 GameObject:
   m_ObjectHideFlags: 0
@@ -1716,6 +1844,7 @@ GameObject:
   - component: {fileID: 1086974537}
   - component: {fileID: 1086974536}
   - component: {fileID: 1086974535}
+  - component: {fileID: 1086974539}
   m_Layer: 0
   m_Name: WP (5)
   m_TagString: Untagged
@@ -1816,6 +1945,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1451350367}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1086974539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086974534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161a1e766333a7f4697e0b6a1b4f9356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Waypoint
+  m_Neibores:
+  - {fileID: 2058963066}
+  - {fileID: 1868627601}
+  bLink: 0
+  inFloor: 0
 --- !u!1 &1197203770
 GameObject:
   m_ObjectHideFlags: 0
@@ -2320,6 +2466,7 @@ GameObject:
   - component: {fileID: 1775329529}
   - component: {fileID: 1775329528}
   - component: {fileID: 1775329527}
+  - component: {fileID: 1775329531}
   m_Layer: 0
   m_Name: WP (2)
   m_TagString: Untagged
@@ -2420,6 +2567,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1451350367}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1775329531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775329526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161a1e766333a7f4697e0b6a1b4f9356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Waypoint
+  m_Neibores:
+  - {fileID: 33592104}
+  - {fileID: 1005809320}
+  bLink: 0
+  inFloor: 0
 --- !u!1 &1824625646
 GameObject:
   m_ObjectHideFlags: 0
@@ -2544,6 +2708,7 @@ GameObject:
   - component: {fileID: 1826631099}
   - component: {fileID: 1826631098}
   - component: {fileID: 1826631097}
+  - component: {fileID: 1826631101}
   m_Layer: 0
   m_Name: WP (7)
   m_TagString: Untagged
@@ -2644,6 +2809,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1451350367}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1826631101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826631096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161a1e766333a7f4697e0b6a1b4f9356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Waypoint
+  m_Neibores:
+  - {fileID: 240400980}
+  - {fileID: 2058963066}
+  bLink: 0
+  inFloor: 0
 --- !u!1 &1868627601
 GameObject:
   m_ObjectHideFlags: 0
@@ -2656,6 +2838,7 @@ GameObject:
   - component: {fileID: 1868627604}
   - component: {fileID: 1868627603}
   - component: {fileID: 1868627602}
+  - component: {fileID: 1868627606}
   m_Layer: 0
   m_Name: WP (11)
   m_TagString: Untagged
@@ -2756,6 +2939,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1451350367}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1868627606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868627601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161a1e766333a7f4697e0b6a1b4f9356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Waypoint
+  m_Neibores:
+  - {fileID: 1086974534}
+  - {fileID: 33592104}
+  - {fileID: 901021545}
+  - {fileID: 852156810}
+  bLink: 0
+  inFloor: 0
 --- !u!1 &1939170233
 GameObject:
   m_ObjectHideFlags: 0
@@ -2880,6 +3082,7 @@ GameObject:
   - component: {fileID: 2058963069}
   - component: {fileID: 2058963068}
   - component: {fileID: 2058963067}
+  - component: {fileID: 2058963071}
   m_Layer: 0
   m_Name: WP (6)
   m_TagString: Untagged
@@ -2980,6 +3183,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1451350367}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2058963071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058963066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161a1e766333a7f4697e0b6a1b4f9356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Waypoint
+  m_Neibores:
+  - {fileID: 1826631096}
+  - {fileID: 1086974534}
+  bLink: 0
+  inFloor: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
