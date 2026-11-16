@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 33592109}
   m_Layer: 0
   m_Name: WP (1)
-  m_TagString: Untagged
+  m_TagString: WP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 183355848}
   - component: {fileID: 183355847}
   - component: {fileID: 183355846}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 240400985}
   m_Layer: 0
   m_Name: WP (8)
-  m_TagString: Untagged
+  m_TagString: WP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -769,7 +769,7 @@ GameObject:
   - component: {fileID: 626808544}
   - component: {fileID: 626808543}
   - component: {fileID: 626808542}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall_02 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -881,7 +881,7 @@ GameObject:
   - component: {fileID: 736940787}
   - component: {fileID: 736940786}
   - component: {fileID: 736940785}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -996,7 +996,7 @@ GameObject:
   - component: {fileID: 776381285}
   m_Layer: 0
   m_Name: WP (4)
-  m_TagString: Untagged
+  m_TagString: WP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1126,7 +1126,7 @@ GameObject:
   - component: {fileID: 779261729}
   m_Layer: 0
   m_Name: WP (9)
-  m_TagString: Untagged
+  m_TagString: WP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1305,7 +1305,7 @@ GameObject:
   - component: {fileID: 852156815}
   m_Layer: 0
   m_Name: WP
-  m_TagString: Untagged
+  m_TagString: WP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1435,7 +1435,7 @@ GameObject:
   - component: {fileID: 901021550}
   m_Layer: 0
   m_Name: WP (10)
-  m_TagString: Untagged
+  m_TagString: WP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1565,7 +1565,7 @@ GameObject:
   - component: {fileID: 1005809325}
   m_Layer: 0
   m_Name: WP (3)
-  m_TagString: Untagged
+  m_TagString: WP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1692,7 +1692,7 @@ GameObject:
   - component: {fileID: 1025539165}
   - component: {fileID: 1025539164}
   - component: {fileID: 1025539163}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall_02 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1847,7 +1847,7 @@ GameObject:
   - component: {fileID: 1086974539}
   m_Layer: 0
   m_Name: WP (5)
-  m_TagString: Untagged
+  m_TagString: WP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1974,7 +1974,7 @@ GameObject:
   - component: {fileID: 1197203773}
   - component: {fileID: 1197203772}
   - component: {fileID: 1197203771}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2087,7 +2087,7 @@ GameObject:
   - component: {fileID: 1388179587}
   - component: {fileID: 1388179586}
   - component: {fileID: 1388179585}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2242,7 +2242,7 @@ GameObject:
   - component: {fileID: 1491260215}
   - component: {fileID: 1491260214}
   - component: {fileID: 1491260213}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall_02 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2354,7 +2354,7 @@ GameObject:
   - component: {fileID: 1494234664}
   - component: {fileID: 1494234663}
   - component: {fileID: 1494234662}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall_02 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2469,7 +2469,7 @@ GameObject:
   - component: {fileID: 1775329531}
   m_Layer: 0
   m_Name: WP (2)
-  m_TagString: Untagged
+  m_TagString: WP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2596,7 +2596,7 @@ GameObject:
   - component: {fileID: 1824625649}
   - component: {fileID: 1824625648}
   - component: {fileID: 1824625647}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall_01 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2711,7 +2711,7 @@ GameObject:
   - component: {fileID: 1826631101}
   m_Layer: 0
   m_Name: WP (7)
-  m_TagString: Untagged
+  m_TagString: WP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2841,7 +2841,7 @@ GameObject:
   - component: {fileID: 1868627606}
   m_Layer: 0
   m_Name: WP (11)
-  m_TagString: Untagged
+  m_TagString: WP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2970,7 +2970,7 @@ GameObject:
   - component: {fileID: 1939170236}
   - component: {fileID: 1939170235}
   - component: {fileID: 1939170234}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall_02 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3085,7 +3085,7 @@ GameObject:
   - component: {fileID: 2058963071}
   m_Layer: 0
   m_Name: WP (6)
-  m_TagString: Untagged
+  m_TagString: WP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

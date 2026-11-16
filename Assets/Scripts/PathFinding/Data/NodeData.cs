@@ -18,6 +18,11 @@ public class NodeData
     /// <summary>所在樓層，目前全部為 0，預留給進階功能 3。</summary>
     public int Floor;
 
+    /// <summary>
+    /// 是否有連接
+    /// </summary>
+    public bool m_bLink;
+
     /// <summary>相鄰節點的 ID 列表。存 ID 而不是物件參照，才能直接寫進 txt。</summary>
     public List<int> NeighborIds = new List<int>();
 
