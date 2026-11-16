@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour
 {
+    public static Waypoint Instantiate {  get; private set; }
     public List<GameObject> m_Neibores;
     public bool bLink = false;
     public int inFloor = 0;
