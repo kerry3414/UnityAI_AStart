@@ -2,43 +2,71 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-using static Unity.Collections.AllocatorManager;
 
+/// <summary>
+/// 路徑點的存檔與讀檔
+/// 格式：
+///   NumNode N
+///   ID x y z 樓層 Link 鄰居數 鄰居ID1 鄰居ID2 ...
+/// </summary>
 public class GraphFileIO
 {
-    public List< NodeData > m_NodeList;
+    public List< NodeData > m_NodeList = new List<NodeData>(); //節點資料庫（一開始就建立，避免 LoadWP 時是 null）
+
+    // Application.streamingAssetsPath 是「資料夾」路徑（編輯器裡是 Assets/StreamingAssets），
+    // 不是檔案，所以要再接上檔名。
+
+    public static string FilePath => Path.Combine(Application.streamingAssetsPath, "waypoint.txt");
+    //初始化：把場景中的 WP 物件轉成節點資料（ID = 在陣列中的 index）
     public void Init() 
     {
-        m_NodeList = new List<NodeData>();
-        GameObject[] gos = GameObject.FindGameObjectsWithTag("WP");
-        foreach (GameObject g in gos) 
+        m_NodeList = new List<NodeData>(); //節點資料庫建立記憶體
+        GameObject[] gos = GameObject.FindGameObjectsWithTag("WP");  //宣告WG的GameObject資料庫
+        List<GameObject> goList = new List<GameObject>(gos);
+        for (int i = 0; i < gos.Length; i++)
         {
+            Waypoint wp = gos[i].GetComponent<Waypoint>();
             NodeData point = new NodeData();
-            point.Id = 0;
-            point.Position = g.transform.position;
-            point.m_bLink = g.GetComponent<Waypoint> ();
-            point.Floor = g.GetComponent<Waypoint>();
-            point.NeighborIds = new List<int>();
-
+            point.Id = i;
+            point.Position =gos[i].transform.position;
+            point.m_bLink = wp.bLink;
+            point.Floor = wp.inFloor;
+            foreach (GameObject nei in wp.m_Neibores)
+            {
+                if (nei == null) continue;
+                int neiId = goList.IndexOf(nei);
+                if(neiId >= 0) point.AddNeighbor(neiId);
+            }
             m_NodeList.Add(point);
         }
     }
 
+    //存檔
     public void Save()
     {
         GameObject[] gos = GameObject.FindGameObjectsWithTag("WP");
-        StreamWriter sw = new StreamWriter("StreamingAssets/waypoints.txt", false);
+        List<GameObject> goList =new List<GameObject>(gos);
+        Directory.CreateDirectory(Application.streamingAssetsPath);
+        StreamWriter sw = new StreamWriter(FilePath, false); //Application.streamingAssetsPath這是什麼工具?
 
         Vector3 position;
         int iNeiId = -1;
-        int i, j, k;
+        int i, j;
         int nNode = gos.Length;
         string s = "NumNode" + nNode.ToString();
         sw.WriteLine(s);
         for (i = 0; i < gos.Length; i++)
         {
+            Waypoint wp = gos[i].GetComponent<Waypoint>();
+            if (wp == null) 
+            {
+                Debug.LogError(gos[i].name + "有 WP Tag 但沒有 Waypoint 元件，存檔中止");
+                sw.Close();
+                return;
+            }
+
             position = gos[i].transform.position;
-            s = " ";
+            s = "";
             s += i;
             s += " ";
 
@@ -49,28 +77,17 @@ public class GraphFileIO
             s += position.z;
             s += " ";
 
-            Waypoint wp = gos[i].GetComponent<Waypoint>();
             s += wp.inFloor;
             s += " ";
             s += wp.bLink;
             s += " ";
             s += wp.m_Neibores.Count;
-            s += " ";
             for (j = 0; j < wp.m_Neibores.Count; j++)
-            {
-                iNeiId = -1;
-                for (k = 0; k < gos.Length; k++)
-                {
-                    if (k == i) continue;
-                    if (wp.m_Neibores[j].name.Equals(gos[k].name))
-                    {
-                        iNeiId = k;
-                        break;
-                    }
-                }
-
-                s += iNeiId;
+            { 
+                GameObject nei = wp.m_Neibores[j];
+                iNeiId = (nei == null) ? -1 : goList.IndexOf(nei);
                 s += " ";
+                s += iNeiId;
             }
 
             sw.WriteLine(s);
@@ -78,14 +95,19 @@ public class GraphFileIO
         sw.Close();
     }
 
-    public void LoadWP() 
+    //讀檔：成功回傳 true
+    public bool LoadWP() 
     {
-        StreamReader sr = new StreamReader("StreamingAssets/waypoints.txt");
-        if (sr == null) 
+        m_NodeList = new List<NodeData> (); //每次讀檔都清空重來
+
+        // new StreamReader 找不到檔案會直接丟例外，不會回傳 null，所以要先檢查
+        if (!File.Exists(FilePath))
         {
-            return;
+            Debug.LogWarning("找不到路徑檔：" + FilePath);
+            return false;
         }
 
+        StreamReader sr = new StreamReader(FilePath);
         string sAll =sr.ReadToEnd();
         sr.Close();
 
@@ -99,7 +121,9 @@ public class GraphFileIO
         {
             string s = sLine[iLineIndex];
             iLineIndex++;
-            s.Trim();
+            s = s.Trim();
+            if(s.Length == 0) continue;
+
             string[] ss = s.Split(' ');
             if (ss[0].Equals("NumNode")) 
             {
@@ -107,16 +131,17 @@ public class GraphFileIO
                 for (i = 0; i < nNode; i++) 
                 {
                     pNode = new NodeData();
-                    pNode.IsNeighbor = new List<NodeData>();
+                    pNode.Id = i; // ★ ID 要設定，AddNeighbor 會用 Id 判斷是不是自己
+
                     m_NodeList.Add(pNode);
                 }
                 continue;
             }
 
-            if (ss[0] == " ") continue;
-
             int nId = -1;
-            bool bInt = int.TryParse(ss[0], out nId);
+            if (!int.TryParse(ss[0], out nId)) continue;
+            if(ss.Length < 7) continue;
+
             int nNei = 0;
             if (nId >= 0 && nId < nNode) 
             {
@@ -125,17 +150,18 @@ public class GraphFileIO
                 pNode.Position.y = float.Parse(ss[2]);
                 pNode.Position.z = float.Parse(ss[3]);
                 pNode.Floor = int.Parse(ss[4]);
-                pNode.m_bLink = ss[5].Equals("True") ? true : false;
+                pNode.m_bLink = ss[5].Equals("True");
                 nNei = int.Parse(ss[6]);
-                for (i = 0; i < nNei; i++)
+                for (i = 0; i < nNei && 7 + i < ss.Length; i++)
                 {
                     int neiId = int.Parse(ss[7 + i]);
                     if (neiId > -1 && neiId < nNode)
                     {
-                        pNode.IsNeighbor.Add(m_NodeList[neiId]);
+                        pNode.AddNeighbor(neiId);
                     }
                 }
             }
         }
+        return true;
     }
 }
